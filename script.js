@@ -11,13 +11,14 @@ const myCard = document.querySelector('#my-card');
 const graziePer = document.querySelector('#cardGrazie');
 const cardSconto = document.querySelector('#cardSconto');
 const cardPercorrenza = document.querySelector('#cardPercorrenza');
+const cardCosto = document.querySelector('#costoTotale');
 
 // event.preventDefault(); per togliere il comportamento di defaul di refresh al submit
 
 function formSubmitHandler(event){
     event.preventDefault(); // blocco il refresh
 
-    // Validazione nome e cognome
+    // Validazione form
     const nomeCognomeSplitted = nomeCognome.value.trim().split(' ');
     if (nomeCognomeSplitted === '' || nomeCognomeSplitted.length < 2) {
     alert('Inserisci Nome e Cognome valido!');
@@ -38,6 +39,10 @@ function formSubmitHandler(event){
 
     // rimuovo la classe d-none alla card così appare appena si fa submit
     myCard.classList.remove('d-none');
+        // Se validazione OK allora
+    // Valori da immettere nella scheda di riepilogo
+    graziePer.innerText = (`Grazie per averci scelto ${nomeCognome.value}`);
+
 
 }
 
