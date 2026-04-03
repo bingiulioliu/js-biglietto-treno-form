@@ -14,6 +14,9 @@ const cardSconto = document.querySelector('#cardSconto');
 const cardPercorrenza = document.querySelector('#cardPercorrenza');
 const cardCosto = document.querySelector('#costoTotale');
 
+// Variabili di supporto
+const costoKm = 0.21;
+
 // event.preventDefault(); per togliere il comportamento di defaul di refresh al submit
 
 function formSubmitHandler(event){
@@ -40,7 +43,15 @@ function formSubmitHandler(event){
 
     // rimuovo la classe d-none alla card così appare appena si fa submit
     myCard.classList.remove('d-none');
-        // Se validazione OK allora
+
+    // Se validazione OK allora
+    // Variabili di supporto per calcolo viaggio
+    const costoPieno = costoKm * Number(percorrenzaViaggio.value);
+    let tipoOfferta = 'Nessuna';
+    let scontoApplicato = 1;
+
+    if ()
+
     // Valori da immettere nella scheda di riepilogo
     graziePer.innerText = (`Grazie per averci scelto ${nomeCognome.value}`);
     cardSconto.innerText = (`Sconto applicato: `);
