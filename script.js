@@ -6,6 +6,7 @@ const nomeCognome = document.querySelector('#nomeCognome');
 const anniPasseggero = document.querySelector('#anniPasseggero');
 const percorrenzaViaggio = document.querySelector('#percorrenza');
 const mySubmit = document.querySelector('#mySubmit');
+
 // Variabili per la card di riepilogo acquisto
 const myCard = document.querySelector('#my-card');
 const graziePer = document.querySelector('#cardGrazie');
@@ -42,7 +43,9 @@ function formSubmitHandler(event){
         // Se validazione OK allora
     // Valori da immettere nella scheda di riepilogo
     graziePer.innerText = (`Grazie per averci scelto ${nomeCognome.value}`);
-
+    cardSconto.innerText = (`Sconto applicato: `);
+    cardPercorrenza.innerText = (`KM percorrenza: ${percorrenzaViaggio.value}`);
+    cardCosto.innerText = (`Totale: `);
 
 }
 
