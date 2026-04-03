@@ -50,13 +50,23 @@ function formSubmitHandler(event){
     let tipoOfferta = 'Nessuna';
     let scontoApplicato = 1;
 
-    if ()
+    // Calcolo dello sconto da applicare, se non rientra nei valori non applica nessuno sconto (costoPieno * 1)
+    if (anniPasseggero.value < 18){
+        tipoOfferta = 'Minorenne';
+        scontoApplicato = 0.8;
+    } else if (anniPasseggero.value >= 65){
+        tipoOfferta = 'Over 65';
+        scontoApplicato = 0.6;
+    }
+
+    // Calcolo del prezzo finale
+    const costoFinale = costoPieno * scontoApplicato;
 
     // Valori da immettere nella scheda di riepilogo
     graziePer.innerText = (`Grazie per averci scelto ${nomeCognome.value}`);
-    cardSconto.innerText = (`Sconto applicato: `);
+    cardSconto.innerText = (`Sconto applicato: ${tipoOfferta}`);
     cardPercorrenza.innerText = (`KM percorrenza: ${percorrenzaViaggio.value}`);
-    cardCosto.innerText = (`Totale: `);
+    cardCosto.innerText = (`Totale: ${costoFinale}`);
 
 }
 
