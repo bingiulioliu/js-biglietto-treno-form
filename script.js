@@ -17,11 +17,26 @@ const cardPercorrenza = document.querySelector('#cardPercorrenza');
 function formSubmitHandler(event){
     event.preventDefault(); // blocco il refresh
 
+    // Validazione nome e cognome
     const nomeCognomeSplitted = nomeCognome.value.trim().split(' ');
-    console.log(nomeCognomeSplitted);
+    if (nomeCognomeSplitted === '' || nomeCognomeSplitted.length < 2) {
+    alert('Inserisci Nome e Cognome valido!');
+    return; // Interrompo l'esecuzione
+    }
+
+    const anniPasseggeroTrimmed = anniPasseggero.value.trim();
+    if (anniPasseggeroTrimmed === '' || isNaN(anniPasseggeroTrimmed) || Number(anniPasseggeroTrimmed <= 0)) {
+    alert("Un'età valida!");
+    return; // Interrompo l'esecuzione
+    }
     
+    const percorrenzaViaggioTrimmed = percorrenzaViaggio.value.trim();
+    if (percorrenzaViaggioTrimmed === '' || isNaN(percorrenzaViaggioTrimmed) || Number(percorrenzaViaggioTrimmed <= 0)) {
+    alert("Un numero in KM valido!");
+    return; // Interrompo l'esecuzione
+    }
 
-
+    // rimuovo la classe d-none alla card così appare appena si fa submit
     myCard.classList.remove('d-none');
 
 }
