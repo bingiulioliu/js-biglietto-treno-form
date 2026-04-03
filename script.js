@@ -7,7 +7,7 @@ const anniPasseggero = document.querySelector('#anniPasseggero');
 const percorrenzaViaggio = document.querySelector('#percorrenza');
 const mySubmit = document.querySelector('#mySubmit');
 // Variabili per la card di riepilogo acquisto
-const cardGrazie = document.querySelector('#my-card');
+const myCard = document.querySelector('#my-card');
 const graziePer = document.querySelector('#cardGrazie');
 const cardSconto = document.querySelector('#cardSconto');
 const cardPercorrenza = document.querySelector('#cardPercorrenza');
@@ -20,6 +20,10 @@ function formSubmitHandler(event){
     const nomeCognomeSplitted = nomeCognome.value.trim().split(' ');
     console.log(nomeCognomeSplitted);
     
+
+
+    myCard.classList.remove('d-none');
+
 }
 
 
