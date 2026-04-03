@@ -29,15 +29,15 @@
                 <input type="checkbox" class="form-check-input" id="condizioniPrivacy" checked>
                 <label class="form-check-label" for="condizioniPrivacy">Accetto condizioni</label>
             </div>
-            <button type="submit" class="btn btn-primary">Compra il biglietto</button>
+            <button type="submit" class="btn btn-primary" id="mySubmit">Compra il biglietto</button>
         </form>
         <!-- Card nascosta che mostra recap acquisto, prezzo (massimo due decimali) e sconto applicato -->
         <div class="card" style="width: 18rem;" class="" id="my-card">
             <div class="card-body">
                 <h5 class="card-title">Riepilogo ordine</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">Da inserire grazie per l'acquisto $nomeCognome</h6>
-                <p class="card-text">Sconto applicato: if minorenne/over/nessuno</p>
-                <p class="card-text">$percorrenza</p>
+                <h6 class="card-subtitle mb-2 text-body-secondary" class="cardGrazie">Da inserire grazie per l'acquisto $nomeCognome</h6>
+                <p class="card-text" class="cardSconto">Sconto applicato: if minorenne/over/nessuno</p>
+                <p class="card-text" class="cardPercorrenza">$percorrenza</p>
             </div>
         </div>
     </div>

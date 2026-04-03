@@ -14,5 +14,14 @@ const cardPercorrenza = document.querySelector('#cardPercorrenza');
 
 // event.preventDefault(); per togliere il comportamento di defaul di refresh al submit
 
+function formSubmitHandler(event){
+    event.preventDefault(); // blocco il refresh
+
+    const nomeCognomeSplitted = nomeCognome.value.trim().split(' ');
+    console.log(nomeCognomeSplitted);
+    
+}
 
 
+// Collegamento submit-funzione
+myForm.addEventListener('submit', formSubmitHandler);
