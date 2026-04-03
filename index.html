@@ -12,7 +12,7 @@
 <body>
     <div class="">
         <!-- Form compilazione per acquisto del biglietto -->
-        <form class="mb-5">
+        <form class="mb-5" id="my-form">
             <div class="mb-3">
                 <label for="nomeCognome" class="form-label">Nome e Cognome</label>
                 <input class="form-control" id="nomeCognome">
@@ -26,13 +26,13 @@
                 <input class="form-control" id="percorrenza">
             </div>
             <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="condizioniPrivacy">
-                <label checked class="form-check-label" for="condizioniPrivacy">Accetto condizioni</label>
+                <input type="checkbox" class="form-check-input" id="condizioniPrivacy" checked>
+                <label class="form-check-label" for="condizioniPrivacy">Accetto condizioni</label>
             </div>
             <button type="submit" class="btn btn-primary">Compra il biglietto</button>
         </form>
         <!-- Card nascosta che mostra recap acquisto, prezzo (massimo due decimali) e sconto applicato -->
-        <div class="card" style="width: 18rem;" class="">
+        <div class="card" style="width: 18rem;" class="" id="my-card">
             <div class="card-body">
                 <h5 class="card-title">Riepilogo ordine</h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">Da inserire grazie per l'acquisto $nomeCognome</h6>
